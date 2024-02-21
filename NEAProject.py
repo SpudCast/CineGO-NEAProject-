@@ -122,6 +122,10 @@ class registerPage:
                 self.error.config(text= "Username is too long!")
                 self.loginDatabase.close()
                 return
+            elif len(password) < 4:
+                self.error.config(text= "Password is too short!")
+                self.loginDatabase.close()
+                return
         with self.con:
             self.cur.execute("INSERT INTO user (username) VALUES (?)",(username,))
         self.loginDatabase.write(self.saveLoginInfo + '\n')
