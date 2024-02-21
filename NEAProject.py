@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import *
 from tkinter import ttk
+from tkinter import font
 import sqlite3 as sq
 import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer
@@ -32,12 +33,12 @@ class Controller:
         window.config(bg='#303030')
         style = ttk.Style(window)
         style.theme_use('clam')
-        style.configure("TLabel", font='Minecraft', foreground="#ffffff", background="#303030")
-        style.configure("TMenubutton", font='Minecraft', foreground="#ffffff", background="#303030")
-        style.configure("TEntry", font='Minecraft', foreground="#000000", background="#303030")
-        style.configure("TButton", font='Minecraft', foreground="#ffffff", background="#303030")
+        style.configure("TLabel", font=('Baguet Script', '15','italic'), foreground="#ffffff", background="#303030")
+        style.configure("TMenubutton", font=('Baguet Script', '20','italic'), foreground="#ffffff", background="#303030")
+        style.configure("TEntry", font='Baguet Script', foreground="#000000", background="#303030")
+        style.configure("TButton", font=('Baguet Script', '20','italic'), foreground="#ffffff", background="#303030")
         style.configure("TFrame", foreground="#ffffff", background="#303030")
-        style.configure("Greyed.TButton", font='Minecraft', foreground="#ff0022", background="#303030")
+        style.configure("Greyed.TButton", font=('Baguet Script', '20','italic'), foreground="#ff0022", background="#303030")
         screen_height = window.winfo_screenheight()
         screen_width = window.winfo_screenwidth()
         window_center_x = int(screen_width/2 - width / 2)
